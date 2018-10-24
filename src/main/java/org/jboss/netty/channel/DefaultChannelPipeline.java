@@ -546,6 +546,7 @@ public class DefaultChannelPipeline implements ChannelPipeline {
     }
 
     public void sendUpstream(ChannelEvent e) {
+        // 从head端开始向后查询，找到第一个支持Upstream类型的handler
         DefaultChannelHandlerContext head = getActualUpstreamContext(this.head);
         if (head == null) {
             if (logger.isWarnEnabled()) {
@@ -568,6 +569,7 @@ public class DefaultChannelPipeline implements ChannelPipeline {
     }
 
     public void sendDownstream(ChannelEvent e) {
+        // 从tail端开始向前查询，找到第一个支持Downstream类型的handler
         DefaultChannelHandlerContext tail = getActualDownstreamContext(this.tail);
         if (tail == null) {
             try {
@@ -600,6 +602,11 @@ public class DefaultChannelPipeline implements ChannelPipeline {
         }
     }
 
+    /**
+     * 从ctx向后找出第一个支持Upstream的
+     * @param ctx
+     * @return
+     */
     private DefaultChannelHandlerContext getActualUpstreamContext(DefaultChannelHandlerContext ctx) {
         if (ctx == null) {
             return null;
@@ -786,6 +793,7 @@ public class DefaultChannelPipeline implements ChannelPipeline {
         }
 
         public void sendUpstream(ChannelEvent e) {
+            // 从当前的下一个开始向后查询，找到第一个支持Upstream类型的handler
             DefaultChannelHandlerContext next = getActualUpstreamContext(this.next);
             if (next != null) {
                 DefaultChannelPipeline.this.sendUpstream(next, e);
