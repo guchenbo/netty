@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="214.0" y="0.0">java.lang.Iterable</node>
+    <node x="188.0" y="79.0">io.netty.channel.ChannelPipeline</node>
+    <node x="0.0" y="0.0">io.netty.channel.ChannelInboundInvoker</node>
+    <node x="327.0" y="0.0">io.netty.channel.ChannelOutboundInvoker</node>
+    <node x="166.0" y="158.0">io.netty.channel.DefaultChannelPipeline</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.netty.channel.ChannelPipeline" target="io.netty.channel.ChannelOutboundInvoker">
+      <point x="48.333333333333314" y="-14.5" />
+      <point x="308.8333333333333" y="54.0" />
+      <point x="430.0" y="54.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="io.netty.channel.ChannelPipeline" target="io.netty.channel.ChannelInboundInvoker">
+      <point x="-48.33333333333334" y="-14.5" />
+      <point x="212.16666666666666" y="54.0" />
+      <point x="97.0" y="54.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="io.netty.channel.ChannelPipeline" target="java.lang.Iterable">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="io.netty.channel.DefaultChannelPipeline" target="io.netty.channel.ChannelPipeline">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>io.netty.channel.DefaultChannelPipeline</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

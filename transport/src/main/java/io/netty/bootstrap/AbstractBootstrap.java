@@ -278,22 +278,32 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
         return doBind(localAddress);
     }
 
+    /**
+     * 执行绑定逻辑
+     * @param localAddress
+     * @return
+     */
     private ChannelFuture doBind(final SocketAddress localAddress) {
+        // 创建并初始化Channel，注册Channel到group上，这个group是parentGroup，是EventLoopGroup
         final ChannelFuture regFuture = initAndRegister();
         final Channel channel = regFuture.channel();
-        if (regFuture.cause() != null) {
+        if (regFuture.cause() != null) {// 发生错误了
             return regFuture;
         }
 
+        // 注册是异步方法，这里需要判断是否完成
         if (regFuture.isDone()) {
+            // 表示注册完成了，直接运行doBind0
             // At this point we know that the registration was complete and successful.
             ChannelPromise promise = channel.newPromise();
             doBind0(regFuture, channel, localAddress, promise);
             return promise;
         } else {
+            // 没完成，这个promise 类似于js6里面的，跟异步编程相关的一种设计
             // Registration future is almost always fulfilled already, but just in case it's not.
             final PendingRegistrationPromise promise = new PendingRegistrationPromise(channel);
             regFuture.addListener(new ChannelFutureListener() {
+                // 没完成，增加监听器，在完成的时候在执行doBind0
                 @Override
                 public void operationComplete(ChannelFuture future) throws Exception {
                     Throwable cause = future.cause();
@@ -304,7 +314,7 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
                     } else {
                         // Registration was successful, so set the correct executor to use.
                         // See https://github.com/netty/netty/issues/2586
-                        promise.registered();
+                        promise.registered();// 设置标记
 
                         doBind0(regFuture, channel, localAddress, promise);
                     }
@@ -314,6 +324,11 @@ public abstract class AbstractBootstrap<B extends AbstractBootstrap<B, C>, C ext
         }
     }
 
+    /**
+     * 1、创建并初始化Channel
+     * 2、注册Channel到group
+     * @return
+     */
     final ChannelFuture initAndRegister() {
         Channel channel = null;
         try {

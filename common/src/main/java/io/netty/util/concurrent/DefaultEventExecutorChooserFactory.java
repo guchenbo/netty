@@ -32,7 +32,7 @@ public final class DefaultEventExecutorChooserFactory implements EventExecutorCh
     @SuppressWarnings("unchecked")
     @Override
     public EventExecutorChooser newChooser(EventExecutor[] executors) {
-        if (isPowerOfTwo(executors.length)) {
+        if (isPowerOfTwo(executors.length)) {// 长度是不是2的幂次方
             return new PowerOfTwoEventExecutorChooser(executors);
         } else {
             return new GenericEventExecutorChooser(executors);
@@ -53,6 +53,7 @@ public final class DefaultEventExecutorChooserFactory implements EventExecutorCh
 
         @Override
         public EventExecutor next() {
+            //  idx.getAndIncrement() 相当于线程安全的 idx++
             return executors[idx.getAndIncrement() & executors.length - 1];
         }
     }
@@ -68,6 +69,21 @@ public final class DefaultEventExecutorChooserFactory implements EventExecutorCh
         @Override
         public EventExecutor next() {
             return executors[Math.abs(idx.getAndIncrement() % executors.length)];
+        }
+    }
+
+    public static void main(String[] args) {
+        int val = 7;
+        System.out.println(Integer.toBinaryString(val));
+        System.out.println(Integer.toBinaryString(-val));
+        System.out.println(isPowerOfTwo(val));
+
+
+        AtomicInteger idx = new AtomicInteger();
+        for (int i = 0; i < 15; i++) {
+            int j=idx.getAndIncrement();
+            System.out.println(j & 7);
+            System.out.println(j % 7);
         }
     }
 }

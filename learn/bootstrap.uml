@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="29.5" y="0.0">io.netty.bootstrap.ChannelFactory</node>
+    <node x="29.5" y="79.0">io.netty.channel.ChannelFactory</node>
+    <node x="0.0" y="158.0">io.netty.channel.ReflectiveChannelFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.netty.channel.ReflectiveChannelFactory" target="io.netty.channel.ChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="io.netty.channel.ChannelFactory" target="io.netty.bootstrap.ChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="106.5" y="-93.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

@@ -34,6 +34,9 @@ public abstract class MultithreadEventExecutorGroup extends AbstractEventExecuto
     private final Set<EventExecutor> readonlyChildren;
     private final AtomicInteger terminatedChildren = new AtomicInteger();
     private final Promise<?> terminationFuture = new DefaultPromise(GlobalEventExecutor.INSTANCE);
+    /**
+     * 选择器，通过选择器选择next EventExecutor
+     */
     private final EventExecutorChooserFactory.EventExecutorChooser chooser;
 
     /**
@@ -73,25 +76,31 @@ public abstract class MultithreadEventExecutorGroup extends AbstractEventExecuto
         }
 
         if (executor == null) {
+            //  默认是executor实现：每次都分配一个线程去执行
             executor = new ThreadPerTaskExecutor(newDefaultThreadFactory());
         }
 
         children = new EventExecutor[nThreads];
 
+        //  循环创建每个child，出错就抛错
         for (int i = 0; i < nThreads; i ++) {
             boolean success = false;
             try {
+                // newChild 交由子类实现，透传args参数
                 children[i] = newChild(executor, args);
                 success = true;
             } catch (Exception e) {
+                //  先finally再抛错
                 // TODO: Think about if this is a good exception type
                 throw new IllegalStateException("failed to create a child event loop", e);
             } finally {
+                //  一旦报错就会停止，然后将已经创建成功child关闭
                 if (!success) {
                     for (int j = 0; j < i; j ++) {
                         children[j].shutdownGracefully();
                     }
 
+                    //  等待每个child结束
                     for (int j = 0; j < i; j ++) {
                         EventExecutor e = children[j];
                         try {
@@ -108,17 +117,19 @@ public abstract class MultithreadEventExecutorGroup extends AbstractEventExecuto
             }
         }
 
+        // ChooserFactory创建一个Chooser对象
         chooser = chooserFactory.newChooser(children);
 
         final FutureListener<Object> terminationListener = new FutureListener<Object>() {
             @Override
             public void operationComplete(Future<Object> future) throws Exception {
                 if (terminatedChildren.incrementAndGet() == children.length) {
-                    terminationFuture.setSuccess(null);
+                    terminationFuture.setSuccess(null); // null 表示不关心结果
                 }
             }
         };
 
+        // 每个child设置监听器，关闭时的监听
         for (EventExecutor e: children) {
             e.terminationFuture().addListener(terminationListener);
         }

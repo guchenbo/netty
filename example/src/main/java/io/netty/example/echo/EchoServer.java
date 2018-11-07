@@ -54,11 +54,11 @@ public final class EchoServer {
         final EchoServerHandler serverHandler = new EchoServerHandler();
         try {
             ServerBootstrap b = new ServerBootstrap();
-            b.group(bossGroup, workerGroup)
-             .channel(NioServerSocketChannel.class)
-             .option(ChannelOption.SO_BACKLOG, 100)
-             .handler(new LoggingHandler(LogLevel.INFO))
-             .childHandler(new ChannelInitializer<SocketChannel>() {
+            b.group(bossGroup, workerGroup)// 设置parentGroup和childGroup
+             .channel(NioServerSocketChannel.class)//   设置Channel类型，ServerBootstrap使用反射构建Channel实例
+             .option(ChannelOption.SO_BACKLOG, 100)// 设置配置
+             .handler(new LoggingHandler(LogLevel.INFO))// parentChannelHandler
+             .childHandler(new ChannelInitializer<SocketChannel>() {// childChannelHandler
                  @Override
                  public void initChannel(SocketChannel ch) throws Exception {
                      ChannelPipeline p = ch.pipeline();
@@ -69,6 +69,8 @@ public final class EchoServer {
                      p.addLast(serverHandler);
                  }
              });
+            // TODO: 2018/10/27 个人猜测这里的parentGroup和parentChannelHandler都是在Server端使用的，
+            // todo 而childGroup和childChannelHandler都是在Server accept一个Client时候，给Client设置的
 
             // Start the server.
             ChannelFuture f = b.bind(PORT).sync();

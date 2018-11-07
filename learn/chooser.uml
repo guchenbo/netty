@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="22.0" y="153.0">io.netty.util.concurrent.EventExecutorChooserFactory</node>
+    <node x="0.0" y="79.0">io.netty.util.concurrent.DefaultEventExecutorChooserFactory.PowerOfTwoEventExecutorChooser</node>
+    <node x="176.0" y="0.0">io.netty.util.concurrent.EventExecutorChooserFactory.EventExecutorChooser</node>
+    <node x="0.0" y="232.0">io.netty.util.concurrent.DefaultEventExecutorChooserFactory</node>
+    <node x="289.0" y="79.0">io.netty.util.concurrent.DefaultEventExecutorChooserFactory.GenericEventExecutorChooser</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="io.netty.util.concurrent.DefaultEventExecutorChooserFactory.GenericEventExecutorChooser" target="io.netty.util.concurrent.EventExecutorChooserFactory.EventExecutorChooser">
+      <point x="0.0" y="-14.5" />
+      <point x="407.5" y="54.0" />
+      <point x="318.5" y="54.0" />
+      <point x="47.5" y="14.5" />
+    </edge>
+    <edge source="io.netty.util.concurrent.DefaultEventExecutorChooserFactory.PowerOfTwoEventExecutorChooser" target="io.netty.util.concurrent.EventExecutorChooserFactory.EventExecutorChooser">
+      <point x="0.0" y="-14.5" />
+      <point x="134.5" y="54.0" />
+      <point x="223.5" y="54.0" />
+      <point x="-47.5" y="14.5" />
+    </edge>
+    <edge source="io.netty.util.concurrent.DefaultEventExecutorChooserFactory" target="io.netty.util.concurrent.EventExecutorChooserFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="102.0" y="133.0" />
+  <SelectedNodes>
+    <node>io.netty.util.concurrent.DefaultEventExecutorChooserFactory.PowerOfTwoEventExecutorChooser</node>
+    <node>io.netty.util.concurrent.DefaultEventExecutorChooserFactory.GenericEventExecutorChooser</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
