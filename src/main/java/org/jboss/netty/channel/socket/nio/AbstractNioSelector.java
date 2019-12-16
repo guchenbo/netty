@@ -192,7 +192,7 @@ abstract class AbstractNioSelector implements NioSelector {
     }
 
     public void run() {
-        thread = Thread.currentThread();
+        thread = Thread.currentThread(); // 将IO线程赋值给属性，当前线程就是IO线程
         startupLatch.countDown();
 
         int selectReturnsImmediately = 0;
@@ -204,12 +204,12 @@ abstract class AbstractNioSelector implements NioSelector {
         // use 80% of the timeout for measure
         final long minSelectTimeout = SelectorUtil.SELECT_TIMEOUT_NANOS * 80 / 100;
         boolean wakenupFromLoop = false;
-        for (;;) {
+        for (;;) {// 死循环，报错也不退出
             wakenUp.set(false);
 
             try {
                 long beforeSelect = System.nanoTime();
-                int selected = select(selector);
+                int selected = select(selector);// 调用NIO Selector的select方法，会阻塞
                 if (SelectorUtil.EPOLL_BUG_WORKAROUND && selected == 0 && !wakenupFromLoop && !wakenUp.get()) {
                     long timeBlocked = System.nanoTime() - beforeSelect;
 

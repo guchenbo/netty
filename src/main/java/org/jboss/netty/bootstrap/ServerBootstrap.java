@@ -317,6 +317,7 @@ public class ServerBootstrap extends Bootstrap {
         if (localAddress == null) {
             throw new NullPointerException("localAddress");
         }
+        // 设置bossPipeline
         Binder binder = new Binder(localAddress);
         ChannelHandler parentHandler = getParentHandler();
 
@@ -326,6 +327,7 @@ public class ServerBootstrap extends Bootstrap {
             bossPipeline.addLast("userHandler", parentHandler);
         }
 
+        // 创建parent Channel
         Channel channel = getFactory().newChannel(bossPipeline);
         final ChannelFuture bfuture = new DefaultChannelFuture(channel, false);
         binder.bindFuture.addListener(new ChannelFutureListener() {
