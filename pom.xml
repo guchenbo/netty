@@ -26,7 +26,11 @@
   <groupId>io.netty</groupId>
   <artifactId>netty-parent</artifactId>
   <packaging>pom</packaging>
+<<<<<<< HEAD
   <version>4.1.29.Final-gcb</version>
+=======
+  <version>4.1.30.Final-SNAPSHOT</version>
+>>>>>>> 1b6e47ab2be03cb0d1cafcdf3862ed6591636e7a
 
   <name>Netty</name>
   <url>http://netty.io/</url>
@@ -53,7 +57,7 @@
     <url>https://github.com/netty/netty</url>
     <connection>scm:git:git://github.com/netty/netty.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/netty/netty.git</developerConnection>
-    <tag>netty-4.1.29.Final</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <developers>
@@ -136,7 +140,7 @@
     <profile>
       <id>noUnsafe</id>
       <properties>
-        <argLine.noUnsafe>-Dio.netty.noUnsafe</argLine.noUnsafe>
+        <argLine.noUnsafe>-Dio.netty.noUnsafe=true</argLine.noUnsafe>
       </properties>
     </profile>
     <profile>
@@ -221,11 +225,11 @@
     <!-- Fedora-"like" systems. This is currently only used for the netty-tcnative dependency -->
     <os.detection.classifierWithLikes>fedora</os.detection.classifierWithLikes>
     <tcnative.artifactId>netty-tcnative</tcnative.artifactId>
-    <tcnative.version>2.0.14.Final</tcnative.version>
+    <tcnative.version>2.0.15.Final</tcnative.version>
     <tcnative.classifier>${os.detected.classifier}</tcnative.classifier>
     <conscrypt.groupId>org.conscrypt</conscrypt.groupId>
     <conscrypt.artifactId>conscrypt-openjdk-uber</conscrypt.artifactId>
-    <conscrypt.version>1.1.3</conscrypt.version>
+    <conscrypt.version>1.3.0</conscrypt.version>
     <conscrypt.classifier />
     <jni.classifier>${os.detected.name}-${os.detected.arch}</jni.classifier>
     <logging.config>${project.basedir}/../common/src/test/resources/logback-test.xml</logging.config>
@@ -721,6 +725,7 @@
 
             <!-- SSLSession implementation -->
             <ignore>javax.net.ssl.SSLEngine</ignore>
+            <ignore>javax.net.ssl.ExtendedSSLSession</ignore>
             <ignore>javax.net.ssl.X509ExtendedTrustManager</ignore>
             <ignore>javax.net.ssl.SSLParameters</ignore>
             <ignore>javax.net.ssl.SNIServerName</ignore>
