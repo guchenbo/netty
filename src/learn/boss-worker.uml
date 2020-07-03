@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="937.3397435897435" y="326.0">org.jboss.netty.channel.socket.nio.ShareableWorkerPool</node>
+    <node x="328.3020833333333" y="247.0">org.jboss.netty.channel.socket.nio.BossPool</node>
+    <node x="723.3397435897435" y="326.0">org.jboss.netty.channel.socket.nio.AbstractNioWorkerPool</node>
+    <node x="117.15224358974353" y="79.0">org.jboss.netty.channel.socket.nio.NioSelector</node>
+    <node x="1271.3397435897436" y="326.0">org.jboss.netty.channel.socket.oio.OioDatagramWorker</node>
+    <node x="219.9375" y="158.0">org.jboss.netty.channel.socket.nio.AbstractNioSelector</node>
+    <node x="346.3790064102564" y="326.0">org.jboss.netty.channel.socket.nio.NioWorker</node>
+    <node x="954.0897435897435" y="158.0">org.jboss.netty.channel.socket.Worker</node>
+    <node x="0.0" y="405.0">org.jboss.netty.channel.socket.nio.NioServerBossPool</node>
+    <node x="838.8397435897435" y="247.0">org.jboss.netty.channel.socket.nio.WorkerPool</node>
+    <node x="1137.3397435897436" y="326.0">org.jboss.netty.channel.socket.oio.OioWorker</node>
+    <node x="557.0897435897435" y="0.0">java.lang.Runnable</node>
+    <node x="85.875" y="158.0">org.jboss.netty.channel.socket.nio.Boss</node>
+    <node x="530.3397435897435" y="326.0">org.jboss.netty.channel.socket.nio.NioDatagramWorker</node>
+    <node x="518.8020833333333" y="247.0">org.jboss.netty.channel.socket.nio.AbstractNioWorker</node>
+    <node x="173.30208333333331" y="247.0">org.jboss.netty.channel.socket.nio.NioClientBoss</node>
+    <node x="1192.5897435897436" y="247.0">org.jboss.netty.channel.socket.oio.AbstractOioWorker</node>
+    <node x="14.302083333333258" y="247.0">org.jboss.netty.channel.socket.nio.NioServerBoss</node>
+    <node x="625.0897435897435" y="405.0">org.jboss.netty.channel.socket.nio.NioDatagramWorkerPool</node>
+    <node x="83.34775641025635" y="326.0">org.jboss.netty.channel.socket.nio.AbstractNioBossPool</node>
+    <node x="575.7227564102564" y="158.0">org.jboss.netty.channel.socket.nio.NioSelectorPool</node>
+    <node x="845.0897435897435" y="405.0">org.jboss.netty.channel.socket.nio.NioWorkerPool</node>
+    <node x="186.0" y="405.0">org.jboss.netty.channel.socket.nio.NioClientBossPool</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.jboss.netty.channel.socket.nio.WorkerPool" target="org.jboss.netty.channel.socket.Worker">
+      <point x="30.0" y="-14.5" />
+      <point x="928.8397435897435" y="227.0" />
+      <point x="988.9647435897435" y="227.0" />
+      <point x="-11.625" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioBossPool" target="org.jboss.netty.channel.socket.nio.Boss">
+      <point x="-45.0" y="-14.5" />
+      <point x="128.34775641025635" y="301.0" />
+      <point x="2.28125" y="301.0" />
+      <point x="2.28125" y="207.0" />
+      <point x="95.75" y="207.0" />
+      <point x="-29.625" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioWorkerPool" target="org.jboss.netty.channel.socket.nio.WorkerPool">
+      <point x="48.5" y="-14.5" />
+      <point x="-30.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioBossPool" target="org.jboss.netty.channel.socket.nio.BossPool">
+      <point x="45.0" y="-14.5" />
+      <point x="218.34775641025635" y="301.0" />
+      <point x="381.3020833333333" y="301.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.Worker" target="java.lang.Runnable">
+      <point x="0.0" y="-14.5" />
+      <point x="1000.5897435897435" y="54.0" />
+      <point x="635.8397435897435" y="54.0" />
+      <point x="26.25" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioDatagramWorkerPool" target="org.jboss.netty.channel.socket.nio.AbstractNioWorkerPool">
+      <point x="0.0" y="-14.5" />
+      <point x="725.0897435897435" y="380.0" />
+      <point x="771.8397435897435" y="380.0" />
+      <point x="-48.5" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioServerBoss" target="org.jboss.netty.channel.socket.nio.AbstractNioSelector">
+      <point x="34.75" y="-14.5" />
+      <point x="118.55208333333326" y="227.0" />
+      <point x="248.60416666666663" y="227.0" />
+      <point x="-57.33333333333334" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioWorker" target="org.jboss.netty.channel.socket.oio.AbstractOioWorker">
+      <point x="0.0" y="-14.5" />
+      <point x="1194.3397435897436" y="301.0" />
+      <point x="1234.3397435897436" y="301.0" />
+      <point x="-41.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioClientBossPool" target="org.jboss.netty.channel.socket.nio.AbstractNioBossPool">
+      <point x="0.0" y="-14.5" />
+      <point x="267.0" y="380.0" />
+      <point x="218.34775641025635" y="380.0" />
+      <point x="45.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.BossPool" target="org.jboss.netty.channel.socket.nio.NioSelectorPool">
+      <point x="26.5" y="-14.5" />
+      <point x="407.8020833333333" y="227.0" />
+      <point x="612.2227564102564" y="227.0" />
+      <point x="-36.5" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioSelector" target="java.lang.Runnable">
+      <point x="0.0" y="-14.5" />
+      <point x="176.65224358974353" y="54.0" />
+      <point x="583.3397435897435" y="54.0" />
+      <point x="-26.25" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioWorker" target="org.jboss.netty.channel.socket.nio.AbstractNioWorker">
+      <point x="0.0" y="-14.5" />
+      <point x="403.3790064102564" y="301.0" />
+      <point x="546.6354166666667" y="301.0" />
+      <point x="-55.66666666666663" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioWorker" target="org.jboss.netty.channel.socket.nio.AbstractNioSelector">
+      <point x="-41.75" y="-14.5" />
+      <point x="560.5520833333333" y="217.0" />
+      <point x="363.27083333333337" y="217.0" />
+      <point x="57.33333333333337" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioWorkerPool" target="org.jboss.netty.channel.socket.nio.AbstractNioWorkerPool">
+      <point x="0.0" y="-14.5" />
+      <point x="915.5897435897435" y="380.0" />
+      <point x="868.8397435897435" y="380.0" />
+      <point x="48.5" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.ShareableWorkerPool" target="org.jboss.netty.channel.socket.Worker">
+      <point x="45.0" y="-14.5" />
+      <point x="1072.3397435897436" y="227.0" />
+      <point x="1012.2147435897435" y="227.0" />
+      <point x="11.625" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioWorker" target="org.jboss.netty.channel.socket.Worker">
+      <point x="41.75" y="-14.5" />
+      <point x="644.0520833333333" y="217.0" />
+      <point x="965.7147435897435" y="217.0" />
+      <point x="-34.875" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioWorkerPool" target="org.jboss.netty.channel.socket.nio.AbstractNioWorker">
+      <point x="-48.5" y="-14.5" />
+      <point x="771.8397435897435" y="301.0" />
+      <point x="657.96875" y="301.0" />
+      <point x="55.66666666666663" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.Boss" target="org.jboss.netty.channel.socket.nio.NioSelector">
+      <point x="0.0" y="-14.5" />
+      <point x="125.375" y="133.0" />
+      <point x="146.90224358974353" y="133.0" />
+      <point x="-29.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.ShareableWorkerPool" target="org.jboss.netty.channel.socket.nio.WorkerPool">
+      <point x="-45.0" y="-14.5" />
+      <point x="982.3397435897435" y="301.0" />
+      <point x="928.8397435897435" y="301.0" />
+      <point x="30.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioDatagramWorker" target="org.jboss.netty.channel.socket.nio.AbstractNioWorker">
+      <point x="0.0" y="-14.5" />
+      <point x="616.8397435897435" y="301.0" />
+      <point x="602.3020833333333" y="301.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioClientBoss" target="org.jboss.netty.channel.socket.nio.Boss">
+      <point x="-33.75" y="-14.5" />
+      <point x="207.05208333333331" y="217.0" />
+      <point x="135.25" y="217.0" />
+      <point x="9.875" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioServerBossPool" target="org.jboss.netty.channel.socket.nio.AbstractNioBossPool">
+      <point x="0.0" y="-14.5" />
+      <point x="83.0" y="380.0" />
+      <point x="128.34775641025635" y="380.0" />
+      <point x="-45.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.AbstractOioWorker" target="org.jboss.netty.channel.socket.Worker">
+      <point x="0.0" y="-14.5" />
+      <point x="1276.0897435897436" y="217.0" />
+      <point x="1035.4647435897436" y="217.0" />
+      <point x="34.875" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioDatagramWorker" target="org.jboss.netty.channel.socket.oio.AbstractOioWorker">
+      <point x="0.0" y="-14.5" />
+      <point x="1357.8397435897436" y="301.0" />
+      <point x="1317.8397435897436" y="301.0" />
+      <point x="41.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.AbstractNioSelector" target="org.jboss.netty.channel.socket.nio.NioSelector">
+      <point x="0.0" y="-14.5" />
+      <point x="305.9375" y="133.0" />
+      <point x="206.40224358974353" y="133.0" />
+      <point x="29.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioServerBoss" target="org.jboss.netty.channel.socket.nio.Boss">
+      <point x="-34.75" y="-14.5" />
+      <point x="49.05208333333326" y="217.0" />
+      <point x="115.5" y="217.0" />
+      <point x="-9.875" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.WorkerPool" target="org.jboss.netty.channel.socket.nio.NioSelectorPool">
+      <point x="-30.0" y="-14.5" />
+      <point x="868.8397435897435" y="207.0" />
+      <point x="685.2227564102564" y="207.0" />
+      <point x="36.5" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.BossPool" target="org.jboss.netty.channel.socket.nio.Boss">
+      <point x="-26.5" y="-14.5" />
+      <point x="354.8020833333333" y="207.0" />
+      <point x="155.0" y="207.0" />
+      <point x="29.625" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioClientBoss" target="org.jboss.netty.channel.socket.nio.AbstractNioSelector">
+      <point x="33.75" y="-14.5" />
+      <point x="274.5520833333333" y="227.0" />
+      <point x="305.9375" y="227.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="494.0" y="216.0" />
+  <SelectedNodes>
+    <node>org.jboss.netty.channel.socket.nio.NioServerBossPool</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
