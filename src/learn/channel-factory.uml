@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="113.75735294117635" y="79.0">org.jboss.netty.channel.socket.DatagramChannelFactory</node>
+    <node x="1463.5" y="158.0">org.jboss.netty.channel.socket.oio.OioClientSocketChannelFactory</node>
+    <node x="898.5" y="158.0">org.jboss.netty.channel.local.LocalServerChannelFactory</node>
+    <node x="1133.5" y="158.0">org.jboss.netty.channel.socket.http.HttpTunnelingClientSocketChannelFactory</node>
+    <node x="610.5" y="237.0">org.jboss.netty.channel.socket.oio.OioServerSocketChannelFactory</node>
+    <node x="1987.5" y="158.0">org.jboss.netty.channel.local.DefaultLocalClientChannelFactory</node>
+    <node x="0.0" y="158.0">org.jboss.netty.channel.socket.nio.NioDatagramChannelFactory</node>
+    <node x="876.5" y="237.0">org.jboss.netty.channel.local.DefaultLocalServerChannelFactory</node>
+    <node x="654.6323529411765" y="79.0">org.jboss.netty.channel.ServerChannelFactory</node>
+    <node x="1725.5" y="158.0">org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory</node>
+    <node x="488.0" y="158.0">org.jboss.netty.channel.socket.ServerSocketChannelFactory</node>
+    <node x="1472.4098039215685" y="79.0">org.jboss.netty.channel.socket.ClientSocketChannelFactory</node>
+    <node x="244.0" y="158.0">org.jboss.netty.channel.socket.oio.OioDatagramChannelFactory</node>
+    <node x="2009.5" y="79.0">org.jboss.netty.channel.local.LocalClientChannelFactory</node>
+    <node x="404.88235294117646" y="79.0">org.jboss.netty.handler.codec.embedder.EmbeddedChannelFactory</node>
+    <node x="344.5" y="237.0">org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory</node>
+    <node x="692.875" y="0.0">org.jboss.netty.channel.ChannelFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.jboss.netty.channel.ServerChannelFactory" target="org.jboss.netty.channel.ChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="746.1323529411765" y="59.0" />
+      <point x="764.875" y="59.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.ClientSocketChannelFactory" target="org.jboss.netty.channel.ChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="1582.9098039215685" y="59.0" />
+      <point x="793.675" y="59.0" />
+      <point x="28.799999999999955" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioServerSocketChannelFactory" target="org.jboss.netty.channel.socket.ServerSocketChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="733.5" y="212.0" />
+      <point x="656.75" y="212.0" />
+      <point x="56.25" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.ServerSocketChannelFactory" target="org.jboss.netty.channel.ServerChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="600.5" y="133.0" />
+      <point x="700.3823529411765" y="133.0" />
+      <point x="-45.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioClientSocketChannelFactory" target="org.jboss.netty.channel.socket.ClientSocketChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="1584.5" y="133.0" />
+      <point x="1582.9098039215685" y="133.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioDatagramChannelFactory" target="org.jboss.netty.channel.socket.DatagramChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="356.0" y="133.0" />
+      <point x="266.0073529411766" y="133.0" />
+      <point x="50.75000000000023" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.DefaultLocalServerChannelFactory" target="org.jboss.netty.channel.local.LocalServerChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.handler.codec.embedder.EmbeddedChannelFactory" target="org.jboss.netty.channel.ChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="509.38235294117646" y="59.0" />
+      <point x="736.075" y="59.0" />
+      <point x="-28.799999999999955" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.DefaultLocalClientChannelFactory" target="org.jboss.netty.channel.local.LocalClientChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.LocalClientChannelFactory" target="org.jboss.netty.channel.ChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="2115.0" y="49.0" />
+      <point x="822.4749999999999" y="49.0" />
+      <point x="57.59999999999991" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory" target="org.jboss.netty.channel.socket.ClientSocketChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="1846.5" y="133.0" />
+      <point x="1656.5764705882352" y="133.0" />
+      <point x="73.66666666666674" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory" target="org.jboss.netty.channel.socket.ServerSocketChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="467.5" y="212.0" />
+      <point x="544.25" y="212.0" />
+      <point x="-56.25" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioDatagramChannelFactory" target="org.jboss.netty.channel.socket.DatagramChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="112.0" y="133.0" />
+      <point x="164.50735294117635" y="133.0" />
+      <point x="-50.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.DatagramChannelFactory" target="org.jboss.netty.channel.ChannelFactory">
+      <point x="2.2737367544323206E-13" y="-14.5" />
+      <point x="215.25735294117658" y="49.0" />
+      <point x="707.2750000000001" y="49.0" />
+      <point x="-57.59999999999991" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.http.HttpTunnelingClientSocketChannelFactory" target="org.jboss.netty.channel.socket.ClientSocketChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="1288.5" y="133.0" />
+      <point x="1509.2431372549017" y="133.0" />
+      <point x="-73.66666666666663" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.LocalServerChannelFactory" target="org.jboss.netty.channel.ServerChannelFactory">
+      <point x="0.0" y="-14.5" />
+      <point x="1006.0" y="133.0" />
+      <point x="791.8823529411765" y="133.0" />
+      <point x="45.75" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="0.0" />
+  <SelectedNodes>
+    <node>org.jboss.netty.channel.socket.DatagramChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.oio.OioClientSocketChannelFactory</node>
+    <node>org.jboss.netty.channel.local.LocalServerChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.http.HttpTunnelingClientSocketChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.oio.OioServerSocketChannelFactory</node>
+    <node>org.jboss.netty.channel.local.DefaultLocalClientChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.nio.NioDatagramChannelFactory</node>
+    <node>org.jboss.netty.channel.local.DefaultLocalServerChannelFactory</node>
+    <node>org.jboss.netty.channel.ServerChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.nio.NioClientSocketChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.ServerSocketChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.ClientSocketChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.oio.OioDatagramChannelFactory</node>
+    <node>org.jboss.netty.channel.local.LocalClientChannelFactory</node>
+    <node>org.jboss.netty.handler.codec.embedder.EmbeddedChannelFactory</node>
+    <node>org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

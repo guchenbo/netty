@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="440.0" y="237.0">org.jboss.netty.channel.local.DefaultLocalServerChannel</node>
+    <node x="0.0" y="237.0">org.jboss.netty.channel.socket.nio.NioServerSocketChannel</node>
+    <node x="220.0" y="237.0">org.jboss.netty.channel.socket.oio.OioServerSocketChannel</node>
+    <node x="5.25" y="158.0">org.jboss.netty.channel.socket.ServerSocketChannel</node>
+    <node x="515.25" y="158.0">org.jboss.netty.channel.local.LocalServerChannel</node>
+    <node x="321.0" y="0.0">org.jboss.netty.channel.Channel</node>
+    <node x="395.4537037037037" y="79.0">org.jboss.netty.channel.AbstractChannel</node>
+    <node x="219.5" y="79.0">org.jboss.netty.channel.ServerChannel</node>
+    <node x="275.0" y="158.0">org.jboss.netty.channel.AbstractServerChannel</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.jboss.netty.channel.socket.nio.NioServerSocketChannel" target="org.jboss.netty.channel.socket.ServerSocketChannel">
+      <point x="-50.0" y="-14.5" />
+      <point x="-44.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioServerSocketChannel" target="org.jboss.netty.channel.socket.ServerSocketChannel">
+      <point x="-50.0" y="-14.5" />
+      <point x="270.0" y="207.0" />
+      <point x="139.5" y="207.0" />
+      <point x="44.75" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.nio.NioServerSocketChannel" target="org.jboss.netty.channel.AbstractServerChannel">
+      <point x="50.0" y="-14.5" />
+      <point x="150.0" y="217.0" />
+      <point x="306.66666666666663" y="217.0" />
+      <point x="-63.33333333333334" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.oio.OioServerSocketChannel" target="org.jboss.netty.channel.AbstractServerChannel">
+      <point x="50.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.DefaultLocalServerChannel" target="org.jboss.netty.channel.AbstractServerChannel">
+      <point x="-53.25" y="-14.5" />
+      <point x="493.25" y="217.0" />
+      <point x="433.33333333333337" y="217.0" />
+      <point x="63.33333333333337" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.AbstractServerChannel" target="org.jboss.netty.channel.ServerChannel">
+      <point x="-47.5" y="-14.5" />
+      <point x="322.5" y="138.0" />
+      <point x="288.0" y="138.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.ServerChannel" target="org.jboss.netty.channel.Channel">
+      <point x="0.0" y="-14.5" />
+      <point x="288.0" y="54.0" />
+      <point x="345.5" y="54.0" />
+      <point x="-24.5" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.socket.ServerSocketChannel" target="org.jboss.netty.channel.ServerChannel">
+      <point x="0.0" y="-14.5" />
+      <point x="94.75" y="138.0" />
+      <point x="242.33333333333334" y="138.0" />
+      <point x="-45.66666666666666" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.AbstractChannel" target="org.jboss.netty.channel.Channel">
+      <point x="0.0" y="-14.5" />
+      <point x="470.9537037037037" y="54.0" />
+      <point x="394.5" y="54.0" />
+      <point x="24.5" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.AbstractServerChannel" target="org.jboss.netty.channel.AbstractChannel">
+      <point x="47.5" y="-14.5" />
+      <point x="417.5" y="138.0" />
+      <point x="470.9537037037037" y="138.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.LocalServerChannel" target="org.jboss.netty.channel.ServerChannel">
+      <point x="0.0" y="-14.5" />
+      <point x="599.75" y="128.0" />
+      <point x="333.66666666666663" y="128.0" />
+      <point x="45.66666666666663" y="14.5" />
+    </edge>
+    <edge source="org.jboss.netty.channel.local.DefaultLocalServerChannel" target="org.jboss.netty.channel.local.LocalServerChannel">
+      <point x="53.25" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="342.5" y="93.5" />
+  <SelectedNodes>
+    <node>org.jboss.netty.channel.Channel</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
